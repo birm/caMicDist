@@ -14,6 +14,7 @@ services:
     ports: ["9099:9099", "8080:8080"]
     volumes:
       - ./config/bindaas_projects/:/root/bindaas/bin/projects/
+      - ./config/bindaas.config.json:/root/bindaas/bin/bindaas.config.json
   iip:
     build: "https://github.com/camicroscope/iipImage.git"
     container_name: ca-iip
