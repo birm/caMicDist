@@ -127,7 +127,11 @@ db.createCollection("template", {
            },
            properties: {
               bsonType: "object",
-              description: "pure-form questions object"
+              description: "pure-form questions object",
+              additionalProperties: {
+                bsonType: "object",
+                required: ["title", "id", "type"]
+              }
            },
          }
      }
