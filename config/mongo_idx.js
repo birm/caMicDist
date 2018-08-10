@@ -21,6 +21,29 @@ db.createCollection("collection", {
  }
 });
 
+db.createCollection("authorization", {
+  validator: {
+     $jsonSchema: {
+       bsonType: "object",
+        required: ["name"],
+        properties: {
+           name: {
+              bsonType: "string",
+              description: "must be a string and is required"
+           },
+           slides: {
+              bsonType: "array",
+              description: "slides user has access to"
+           },
+           collections: {
+              bsonType: "array",
+              description: "must have contents"
+           }
+         }
+     }
+ }
+});
+
 db.createCollection("slide", {
    validator: {
       $jsonSchema: {
