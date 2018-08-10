@@ -1,3 +1,6 @@
+# NOTE
+This repository was moved to https://github.com/camicroscope/Distro/tree/refactor, which may eventually find itself in https://github.com/camicroscope/Distro once that branch goes away.
+
 # caMicDist
 Camic 2.0 distribution
 
